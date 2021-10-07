@@ -26,14 +26,19 @@ dependencies:
 library:
   source-dirs: src
 
+ghc-options:
+  -Wall
+  -Wcompat
+  -Widentities
+  -Wincomplete-record-updates
+  -Wincomplete-uni-patterns
+  -Wpartial-fields
+  -Wredundant-constraints
+
 executables:
   wasted-time-exe:
     main:                Main.hs
     source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - wasted-time
 
@@ -41,9 +46,5 @@ tests:
   wasted-time-test:
     main:                Spec.hs
     source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - wasted-time

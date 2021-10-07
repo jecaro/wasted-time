@@ -22,6 +22,11 @@ dependencies:
 - name: relude
   mixin:
     - (Relude as Prelude)
+- bytestring
+- lens
+- optparse-applicative
+- text
+- transformers-except
 
 library:
   source-dirs: src
@@ -48,3 +53,8 @@ tests:
     source-dirs:         test
     dependencies:
     - wasted-time
+
+default-extensions:
+  - OverloadedStrings
+  - RecordWildCards
+  - ScopedTypeVariables
